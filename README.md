@@ -4,6 +4,8 @@ Guía paso a paso de los comandos de git que utilicé para subir el código al r
 
 Primero tengo que decir que me ubiqué en la carpeta que tengo para la materia y ahí comencé desde cero el archivo .html donde copié la siguiente página: https://www.museo-soumaya.org/
 
+El resultado del trabajo fue la siguiente página: https://netohb.github.io/Museo_Soumaya/
+
 Tengo en link del primer pull request: https://github.com/netohb/Museo_Soumaya/pull/1, ahora debo de explicar que hay un commit en la rama main porque tuve problemas con los pull request, como cree el repositorio vacío e hice los primeros commit en otra rama que no era la main, al intentar hacer un pull request no me dejaba comparar entre ramas, es decir, no existía la rama main, entonces con la ayuda de ChatGPT, puse los comandos siguientes en la terminal: 
 
 ```bash
