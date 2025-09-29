@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Soumaya tarea</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <style>
+        /* ====== CSS para el header (colócalo en <style> o styles.css) ====== */
+        .hero-header .hero {
+            min-height: 100vh;
+            /* alto pantalla completa */
+            background-image: url("escultura_hombre.jpeg");
+            /* <-- cambia la ruta */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            /* para el overlay absoluto */
+        }
+
+        .hero-header .overlay {
+            background: rgba(0, 0, 0, .50);
+            /* oscurece la imagen para legibilidad */
+        }
+
+        /* ====== Fondo de la sección de testimonio ====== */
+        .testimonial-hero {
+            background-image: url("museo-soumaya.jpg");
+            /* ← cambia la ruta */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* ====== CTA final ====== */
+        .cta-banner {
+            background-image: url("museo-soumaya.jpg");
+            /* ← cambia la ruta */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Altura agradable para la franja (≈60% de la ventana) */
+        .cta-height {
+            min-height: 60vh;
+            /* fallback general */
+            min-height: 60dvh;
+            /* altura visible real en móviles */
+        }
+
+        /* Opcional: suaviza el contraste del párrafo */
+        .text-white-75 {
+            color: rgba(255, 255, 255, .85);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="hero-header position-relative">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent position-absolute top-0 start-0 w-100 z-3 py-3">
+            <div class="container">
+                <a class="navbar-brand fw-semibold" href="https://www.museo-soumaya.org/">Museo Soumaya</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.museo-soumaya.org/">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.museo-soumaya.org/about/">Acerca de</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.museo-soumaya.org/offerings/">Ofertas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.museo-soumaya.org/blog/">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.museo-soumaya.org/contact/">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="btn btn-primary btn-lg ms-3" href="https://www.museo-soumaya.org/contact/">Explora ahora</a>
+            </div>
+        </nav>
+
+        <!-- Aquí va ir el hero-->
+        <div class="hero d-flex align-items-center text-center">
+            <div class="overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+            <div class="container position-relative z-1">
+                <h1 class="display-1 fw-bold text-white">Descubre el arte en el<br>Soumaya</h1>
+                <p class="lead text-white-50 mt-3 mb-4">
+                    Un recorrido cultural a través de más de 66,000 obras de arte en el corazón de Polanco.
+                </p>
+                <a class="btn btn-primary btn-lg" href="https://www.museo-soumaya.org/contact/">Explora ahora</a>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Aquí va un contenedor-->
+
+    <!-- Ofertas culturales -->
+    <section id="ofertas" class="py-5">
+        <div class="container">
+
+            <!-- Título y subtítulo -->
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Principales ofertas culturales</h2>
+                <p class="fw-normal">
+                    Descubre las diversas experiencias que el Museo Soumaya tiene para ofrecer a sus visitantes y
+                    amantes del arte.
+                </p>
+            </div>
+
+            <!-- Grid de 3 columnas -->
+            <div class="row g-5 row-cols-1 row-cols-md-2 row-cols-lg-3">
+
+                <!-- Item 1 -->
+                <div class="col">
+                    <!-- Marco de imagen con proporción fija -->
+                    <div class="ratio ratio-1x1 ratio-tall">
+                        <img src="esculturas.jpg" class="w-100 h-100 object-fit-cover"
+                            alt="Exposición en sala principal" loading="lazy">
+                    </div>
+                    <!-- Texto -->
+                    <h3 class="h4 fw-semibold mt-3">Exposiciones</h3>
+                    <p class="fw-normal">
+                        Explora nuestras impresionantes exposiciones permanentes y temporales.
+                        Sumérgete en obras que cuentan historias a lo largo del tiempo.
+                    </p>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="col">
+                    <div class="ratio ratio-1x1 ratio-tall">
+                        <img src="soumaya_guia.jpg" class="w-100 h-100 object-fit-cover" alt="Recorrido guiado virtual"
+                            loading="lazy">
+                    </div>
+                    <h3 class="h4 fw-semibold mt-3">Recorridos Virtuales</h3>
+                    <p class="fw-normal">
+                        Visita el museo desde casa con experiencias interactivas inmersivas.
+                    </p>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="col">
+                    <div class="ratio ratio-1x1 ratio-tall">
+                        <img src="museo-soumaya.jpg" class="w-100 h-100 object-fit-cover"
+                            alt="Recursos educativos del museo" loading="lazy">
+                    </div>
+                    <h3 class="h4 fw-semibold mt-3">Recursos Educativos</h3>
+                    <p class="fw-normal">
+                        Materiales descargables y recursos para enriquecer tu conocimiento sobre el arte y la cultura.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="historia" class="py-5 bg-primary-subtle">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-12 col-lg-6">
+                    <img src="soumaya_noche.jpg" class="w-100 rounded-3" alt="Museo Soumaya" loading="lazy">
+                </div>
+
+                <!-- Columna de texto -->
+                <div class="col-12 col-lg-6">
+                    <h2 class="display-3 fw-bold mb-3">La historia del Museo Soumaya</h2>
+                    <p class="lead fw-normal">
+                        Con más de una década de experiencia, el Museo Soumaya se ha consolidado como un referente en la
+                        promoción del arte y la cultura en México. Nuestro compromiso es acercar al público a una
+                        diversidad de expresiones artísticas a través de exposiciones de alta calidad y programas
+                        educativos innovadores.
+                    </p>
+                    <a class="btn btn-primary btn-lg" href="https://www.museo-soumaya.org/about/">Aprender Más</a>
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- La siguiente parte la hizo completamente chatgpt-->
+
+    <!-- ====== Testimonio a pantalla completa ====== -->
+    <section class="testimonial-hero position-relative min-vh-100 d-flex align-items-center text-center">
+        <!-- Capa oscura para mejorar contraste -->
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50"></div>
+
+        <!-- Contenido -->
+        <div class="container position-relative z-1 py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- Avatar -->
+                    <img src="avatar_generico.jpg" alt="Foto de Carlos Hernández"
+                        class="rounded-circle border border-3 border-white shadow mb-3" width="72" height="72"
+                        style="object-fit: cover;">
+
+                    <!-- Cita -->
+                    <figure class="m-0">
+                        <blockquote class="blockquote">
+                            <p class="text-white fw-semibold fs-3 fs-md-2">
+                                El Museo Soumaya es un lugar mágico donde el arte cobra vida.
+                                Impresionante colección y atención al visitante.
+                            </p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer text-white-50 mt-2">
+                            Carlos Hernández
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Hasta aquí llegó la parte de chat-->
+
+    <section id="eleccion-soumaya" class="py-5">
+        <div class="container">
+
+            <!-- Título y subtítulo -->
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Por qué elegir el Museo Soumaya</h2>
+                <p class="fw-normal">
+                    Nuestro compromiso es ofrecer una experiencia cultural enriquecedora y accesible para todos, con
+                    recursos educativos y artísticos de alta calidad.
+                </p>
+            </div>
+
+            <div class="container text-center">
+                <div class="row align-items-center g-5">
+                    <div class="col-12 col-lg-6">
+                        <img src="soumaya_noche.jpg" class="w-100 rounded-3" alt="Museo Soumaya" loading="lazy">
+                    </div>
+                    <div class="col-12 col-lg-6 justify-content-center text-center h-100 pt-lg-4">
+                        <h4>Acceso cultural</h4>
+                        <p class="lead fw-normal">
+                            El Museo Soumaya democratiza el acceso al arte, proporcionando una plataforma donde todos
+                            pueden disfrutar de la cultura sin barreras económicas.
+                        </p>
+                        <a class="btn btn-primary btn-lg" href="https://www.museo-soumaya.org/about/">Aprender Más</a>
+                    </div>
+
+
+
+                    <div class="col-12 col-lg-6 justify-content-center text-center h-100 pt-lg-4">
+                        <h4>Experiencia inmersiva</h4>
+                        <p class="lead fw-normal">
+                            Con materiales multimedia y recorridos virtuales, ofrecemos una experiencia de visita
+                            innovadora que conecta a los visitantes con las obras de arte de manera única.
+
+
+                        </p>
+                        <a class="btn btn-primary btn-lg" href="https://www.museo-soumaya.org/about/">Aprender Más</a>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                        <img src="soumaya_pisos.jpg" class="w-100 rounded-3" alt="Museo Soumaya" loading="lazy">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="blog" class="py-5">
+        <div class="container">
+
+            <!-- Título -->
+            <div class="text-center mb-5">
+                <h2>Descubre las últimas novedades en nuestro blog!</h2>
+            </div>
+
+
+            <div class="row g-4 align-items-stretch row-cols-1 row-cols-md-2 row-cols-lg-3">
+                <div class="col d-flex">
+                    <div class="card" style="width: 18rem;">
+                        <img src="retablos-coloniales.jpg" class="card-img-top" alt="Retablos coloniales">
+                        <div class="card-body">
+                            <h5 class="card-title">Retablos Coloniales Mexicanos: Historia, Características y Ejemplos
+                                Destacados</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">septiembre 16, 2025 No hay comentarios
+                            </h6>
+                            <p class="card-text">¿Qué son los retablos coloniales mexicanos? Los retablos coloniales
+                                mexicanos son estructuras…</p>
+                            <a href="https://www.museo-soumaya.org/retablos-coloniales-mexicanos/"
+                                class="btn btn-primary">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Segunda tarjeta-->
+                <div class="col d-flex">
+                    <div class="card" style="width: 18rem;">
+                        <img src="precio_entrada.jpg" class="card-img-top" alt="Precio entrada">
+                        <div class="card-body">
+                            <h5 class="card-title">¿Cuánto cuesta la entrada al Museo Soumaya en 2024? Precios, horarios
+                                y descuentos</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">septiembre 9, 2025 No hay comentarios
+                            </h6>
+                            <p class="card-text">¿Cuánto cuesta la entrada al Museo Soumaya en 2024? En 2024, la…</p>
+                            <a href="https://www.museo-soumaya.org/cuanto-cuesta-la-entrada-al-museo-soumaya/"
+                                class="btn btn-primary">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Tercera tarjeta-->
+                <div class="col d-flex">
+                    <div class="card" style="width: 18rem;">
+                        <img src="arquitectura_soumaya.jpg" class="card-img-top" alt="Arquitectura del Soumaya">
+                        <div class="card-body">
+                            <h5 class="card-title">Arquitectura del Museo Soumaya: Diseño, Historia y Características
+                                Emblemáticas</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">septiembre 2, 2025 No hay comentarios
+                            </h6>
+                            <p class="card-text">¿Qué es la arquitectura del Museo Soumaya? La arquitectura del Museo
+                                Soumaya…</p>
+                            <a href="https://www.museo-soumaya.org/arquitectura-del-museo-soumaya/"
+                                class="btn btn-primary">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            <div class="row g-4 align-items-stretch row-cols-1 row-cols-md-2 row-cols-lg-3">
+                <!--Cuarta tarjeta-->
+                <div class="col d-flex">
+                    <div class="card" style="width: 18rem;">
+                        <img src="arte-indigena.jpg" class="card-img-top" alt="Arte indigena">
+                        <div class="card-body">
+                            <h5 class="card-title">Arte indígena del Occidente mesoamericano: historia, características
+                                y legado cultural</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">agosto 26, 2025 No hay comentarios
+                            </h6>
+                            <p class="card-text">¿Qué es el arte indígena del Occidente mesoamericano? El arte indígena
+                                del…</p>
+                            <a href="https://www.museo-soumaya.org/arte-indigena-del-occidente-mesoamericano/"
+                                class="btn btn-primary">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Quinta tarjeta-->
+                <div class="col d-flex">
+                    <div class="card" style="width: 18rem;">
+                        <img src="pensador-Rodin.jpg" class="card-img-top" alt="Pensador Rodin">
+                        <div class="card-body">
+                            <h5 class="card-title">Dónde ver la escultura El Pensador de Rodin en México: historia y
+                                ubicación</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">agosto 19, 2025 No hay comentarios
+                            </h6>
+                            <p class="card-text">¿Dónde ver la escultura El Pensador de Rodin en México? La escultura…
+                            </p>
+                            <a href="https://www.museo-soumaya.org/escultura-el-pensador-rodin-mexico/"
+                                class="btn btn-primary">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sexta tarjeta-->
+                <div class="col d-flex">
+                    <div class="card" style="width: 18rem;">
+                        <img src="..." class="card-img-top" alt="relojes antiguos en colecciones de arte">
+                        <div class="card-body">
+                            <h5 class="card-title">Relojes antiguos en colecciones de arte: historia, valor y piezas
+                                imprescindibles</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">agosto 12, 2025 No hay comentarios
+                            </h6>
+                            <p class="card-text">¿Qué son los relojes antiguos y por qué son valorados en colecciones…
+                            </p>
+                            <a href="https://www.museo-soumaya.org/relojes-antiguos-en-colecciones-de-arte/"
+                                class="btn btn-primary">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <br>
+            <br>
+
+            <div class="row g-4 align-items-stretch row-cols-1 row-cols-md-2 row-cols-lg-3">
+
+                <!-- Séptima tarjeta-->
+                <div class="col d-flex">
+                    <div class="card" style="width: 18rem;">
+                        <img src="talleres-de-arte.jpg" class="card-img-top" alt="talleres de arte gratuitos">
+                        <div class="card-body">
+                            <h5 class="card-title">Talleres de arte gratuitos en el Museo Soumaya: horarios, actividades
+                                y cómo inscribirte</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">agosto 5, 2025 No hay comentarios
+                            </h6>
+                            <p class="card-text">¿Qué son los talleres de arte gratuitos en el Museo Soumaya? Los…
+                            </p>
+                            <a href="https://www.museo-soumaya.org/talleres-de-arte-gratuitos-en-el-museo-soumaya/"
+                                class="btn btn-primary">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Octava tarjeta-->
+                <div class="col d-flex">
+                    <div class="card" style="width: 18rem;">
+                        <img src="escultura-Venus.jpg" class="card-img-top" alt="Escultura venus">
+                        <div class="card-body">
+                            <h5 class="card-title">Escultura Venus Victoriosa de Renoir: Historia, Significado y Dónde
+                                Verla</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">julio 29, 2025 No hay comentarios
+                            </h6>
+                            <p class="card-text">¿Qué es la escultura Venus victoriosa de Renoir? La Venus victoriosa
+                                es…
+                            </p>
+                            <a href="https://www.museo-soumaya.org/escultura-venus-victoriosa-renoir/"
+                                class="btn btn-primary">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Novena tarjeta-->
+                <div class="col d-flex">
+                    <div class="card" style="width: 18rem;">
+                        <img src="fundacion-del-soumaya.jpg" class="card-img-top" alt="quién fundó el soumaya">
+                        <div class="card-body">
+                            <h5 class="card-title">¿Quién fundó el Museo Soumaya? Descubre el origen y su fundador</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">agosto 12, 2025 No hay comentarios
+                            </h6>
+                            <p class="card-text">¿Quién fundó el Museo Soumaya? Descubre al creador de este icónico
+                                museo…
+                            </p>
+                            <a href="https://www.museo-soumaya.org/quien-fundo-el-museo-soumaya/"
+                                class="btn btn-primary">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </section>
+
+    <!-- CTA final -->
+    <section class="cta-banner position-relative text-center text-white overflow-hidden">
+        <!-- overlay -->
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50"></div>
+
+        <div
+            class="container position-relative z-1 d-flex flex-column justify-content-center align-items-center gap-3 cta-height py-5">
+            <h2 class="display-3 fw-bold m-0">Únete a nuestras actividades</h2>
+            <p class="lead text-white-75 m-0" style="max-width: 56rem;">
+                Participa en nuestras exposiciones y eventos para vivir el arte como nunca antes.
+                ¡Te esperamos en el Museo Soumaya!
+            </p>
+            <a class="btn btn-primary btn-lg mt-3" href="https://www.museo-soumaya.org/contact/">Explora ahora</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 border-top bg-body">
+        <div class="container">
+            <p class="text-center text-muted small mb-0">
+                Derechos de Autor © 2025 Museo Soumaya by Fans
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
